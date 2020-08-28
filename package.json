@@ -1,0 +1,15 @@
+{
+    "name": "mariekauth-react-tutorial",
+    "version": "0.1.0",
+    "private": false,
+    "repository": "https://github.com/mariekauth/ReactTutorial",
+    "license": "MIT",
+    "readme": "https://github.com/mariekauth/ReactTutorial#readme",
+    "dependencies": {
+        "npm": "^6.14.8",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "yarn": "^1.22.5"
+    },
+    "scripts": {}
+}
