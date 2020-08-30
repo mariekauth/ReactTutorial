@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <met name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Developer Toolbox" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <title>Developer Tools</title>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <div id="temp">
+            <h1>Begin</h1>
+            <p>
+                I added the primary files used, but found a flaw and am temporarily removing them.
+            </p>
+            <p>
+                The purpose of this project is for ME to completely understand REACT, how it is working, what components are included and what each one does.
+            </p>
+            <p>
+                I got ahead of myself and started using typescript without fulling understanding what it is, what additional libraries are needed and the purpose of them. 
+                To rectify this situation, I am removing my starter files and creating a step by step, show me the results at each step.
+                I also intend to explain each component as I add it.
+            </p>
+            <p>
+                ECMAScript6 (JavaScript 6 if you will): Introduces arrow functions and classes. 
+            </p>
+            <p>
+                Arrow functions: While this may seem confusing at first, to me I like to think of arrow functions as similar to adding ternary operators except for JavaScript functions.
+                Arrow functions just write JavaScript functions as a shortcut method. (Not the if true then else like ternary operators)
+            </p>
+            <p>
+                JavaScript classes. For years we have been taught to write JavaScript "objects" that aren't true objects. Also to create a JavaScript object you write it as a function.
+                JavaScript classes provides a way to create javascript objects that are more inline with how other programming languages work.
+            </p>
+            <p>
+                For me one of the biggest hurdles to get over in understanding React was to realize that it is simply JavaScript. 
+                It is just libraries that allow code to be built faster, and new features have been written to help develop code faster.
+                Similar to when I went from using pure JavaScript to using JQuery. 
+            </p>
+            <p>
+                Example: Years ago I wrote a JavaScript function called getPage(page, strEle). 
+                This function took page as an arguement, and the "id" of an element as an argument.
+                It used an ajaxRequest to get a page from the server and render the results inside a div tag.
+                If the contents could not be retrieved a message stating 'Your request can not be processed at this time' was displayed instead.
+                Every time a new browser came out, this function had to be extended. 
+                Later, I updated the function to getPage(page, ele) - (Yes, this was a major update. But was in a separate environment than the original code, so it was ok).
+                The updated function getPage(page,ele) used JQuery instead, the first argument was just the name of the page (for instance example.htm was example).
+                Because the function was "SCOPED" this time, updates would be done as the function was implemented into practice. 
+                The second argment actually took the element object as the argument, rather than the id of the element.
+                *Note: I wrote the first version of the function over 10 years ago, and the second version of the function over 5 years ago.
+                <br />
+                The first version was included as part of a large custom (private) javascript library that is being used in hundreds of websites with thousands of pages. 
+                It is still being phased out.
+                <br />
+                Anyway the point is ReactDOM.render(<App />, document.getElementById('root')); 
+                while more advanced is in essence doing something VERY similar to what I was doing with that basic function. 
+                For me this makes learning and understanding React so much easier. Each one of these "packages" is simply a JavaScript library.
+                While this may be oversimplying things, for me with this understanding it does make it just that "simple" for me.
+            </p>
+            <p>
+                React and ReactDOM: As it turns out these started out as the same library and were split into two separate libraries as of v0.14
+            </p>
+            <p>
+                React is used for creating the JavaScript function, objects, etc. and utilizing them as components.
+            </p>
+            <p>
+                ReactDOM provides the functionality for interacting with the DOM.
+            </p>
+            <dl>
+                <dt>Node.js</dt>
+                <dd>Node.js must be installed first for any of this to work</dd>
+        
+                <dt>npm</dt>
+                <dd>Node Package Manager - Is a package manager and will keep track of all packages and dependencies for this project.</dd>
+                <dd>We won't be using this directly, but will instead be using yarn which extends npm</dd>
+        
+                <dt>yarn</dt>
+                <dd>Yarn is a also a package manager, It extends npm</dd>
+                <dd>After installing yarn, we will remove package-lock.json because we will be using yarn.lock instead and keeping both would create a conflict.</dd>
+                
+                <dt>npm install yarn -g</dt>
+                <dd>This installs yarn globally, if package-lock.json was created, remove it to prevent conflict with yarn.lock</dd>
+        
+                <dt>yarn add npm@latest</dt>
+                <dd>This will install the latest version of npm and will override the global one.</dd>
+                <dd>It will add the version dependency to package.json and will be placed in yarn.lock</dd>
+                <dd>Keeping the version of npm and yarn directly in your project should resolve conflicts for developers who may be using different versions of npm or yarn</dd>
+                <dd>To remain consistent, the team will still need to choose npm or yarn and use the same package manager to avoid conflicts</dd>
+        
+                <dt>yard add yarn</dt>
+                <dd>Adds versioning for yarn to your yarn.lock</dd>
+                <dd>This should help resolve conflicts when different developers on the team may be using different versions of yarn</dd>
+        
+                <dt>yarn add react</dt>
+                <dd>Add react javascript library</dd>
+                <dd>React is used for creating the JavaScript function, objects, etc. and utilizing them as components.</dd>
+        
+                <dt>yarn add react-dom</dt>
+                <dd>Add react library</dd>
+                <dd>ReactDOM provides the functionality for interacting with the DOM.</dd>
+        
+                <dt>yarn add @types/react-dom</dt>
+                <dd>Adds TypeScript definitions for React (react-dom)</dd>
+                <dd>Using TypeScript allows you to declare variables as a certain type such as int, boolean or even a custom object such as Car</dd>
+                <dd>TypeScript is a static type checker and checks that variables were declared as a specific type are of the type declared. This reduces errors at runtime.</dd>
+                <dd>TypeScript is a typed superset of JavaScript. ALL valid JavaScript is valid in TypeScript. In other words TypeScript extends JavaScript, not replaces it.</dd>
+                <dd>ReactDOM does not contain type definitions. This library adds types to react-dom for use in typescript.</dd>
+                <dd>To use TypeScript change the file extension from .js to .ts</dd>
+                <dd>With TypeScript type mismatch errors are displayed during development rather than waiting until the code is run.</dd>
+                <dd>https://www.typescriptlang.org/docs/handbook/compiler-options.html</dd>
+                <dd>Before running the App use tsc to compile the TypeScript and produce static .js files.</dd>
+                <dd>https://www.typescriptlang.org/docs/handbook/tsconfig-json.html</dd>
+                <dd>tsconfig.json</dd>
+                <dd>jsconfig.json</dd>
+        
+                <dt>yarn add react-scripts</dt>
+                <dd>This installed a ton of packages.</dd>
+                <dd>To run the package locally using yarn run start you must have some type of server setup or able to be used</dd>
+
+                <dt>yarn add typescript</dt>
+                <dd>Using TypeScript allows you to declare variables as a certain type such as int, boolean or even a custom object such as Car</dd>
+                <dd>TypeScript is a static type checker and checks that variables were declared as a specific type are of the type declared. This reduces errors at runtime.</dd>
+                <dd>TypeScript is a typed superset of JavaScript. ALL valid JavaScript is valid in TypeScript. In other words TypeScript extends JavaScript, not replaces it.</dd>
+
+                <dt>yarn add @types/react</dt>
+                <dd>React does dont contain type definitions. This library adds types to react for use in typescript.</dd>
+            </dl>
+            <p>
+                Adding the packages one by one and manually configuring the configuration files such as the scripts section of package.json has taken a lot longer than I thought it would.
+                The goal is to create a React app web application using the components commonly used and understand what each library is doing and why we use it.
+            </p>
+            <p>
+                Yes, we could simply add react scripts to the top of an existing web application html page and use a small portion, but that does not meet this goal, so I am skipping it in this documentaion.
+                As I went through from an empty folder with no files and added each piece manually, I found that it took longer to have a basic working solution than I expected, so added this page as a log.
+                Since I am completely new to react, almost completely new to typescript and the goal is to not only be able to use the packages, but to understand them and what purpose they server it took longer to get a working copy.
+            </p>
+            <p>
+                Since I did not have a working copy, and wanted all documentation stored in this working copy, I decided to create this page as a log. But of course, I could not even add it as part of the solution.
+                So instead I added it as static html. I do now have a working solution, and can see how I may have gotten there sooner, since the goal is to have all of the pieces and understand them, I am going to keep the solution as is and go forward.
+                I will NOT be going backwards with minimal components, but will instead commit now. Next, I will add JSX. JSX will allow us to produce React elements.
+            </p>
+        </div>
+    </body>
+</html>
